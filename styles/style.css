@@ -35,9 +35,11 @@ body {
   min-height: 100vh;
 }
 
-.content-wrapper {
+.wrapper {
   padding: 10px;
 }
+
+/* Header */
 
 .header {
   background-color: var(--dark-blue);
@@ -47,37 +49,37 @@ body {
   text-align: center;
 }
 
-.nav-logo {
+.nav__logo {
   color: var(--bright-white);
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
-.nav-list {
+.nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
 }
 
-.list-item {
+.nav__item {
   margin-bottom: 5px;
   padding: 5px;
   border-bottom: 3px solid #0c1a2e8e;
   font-size: 18px;
 }
 
-.list-item:last-child {
+.nav__item:last-child {
   margin-bottom: 0;
 }
 
-.list-link {
+.nav__item > a {
   color: var(--medium-white);
   text-decoration: none;
   transition: 0.1s linear;
 }
 
-.list-link:hover {
+.nav__item > a:hover {
   color: rgb(144, 144, 255);
 }
 
@@ -86,21 +88,21 @@ body {
   flex-direction: column;
 }
 
-.hero-info {
+.hero__content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.hero-title {
+.hero__title {
   margin: 0;
   color: var(--bright-white);
   font-size: 40px;
   text-align: center;
 }
 
-.hero-description {
+.hero__description {
   color: var(--medium-white);
   font-size: 18px;
   text-align: center;
@@ -117,18 +119,17 @@ body {
   max-width: 120px;
 }
 
-.hero-image-container {
+.hero__image-container {
   align-self: center;
 }
 
-.hero-image {
+.hero__image {
   max-width: 100%;
   border-radius: 5px;
 }
 
 @media (min-width: 550px) {
-  .content-wrapper {
-    /* padding: 10px 50px; */
+  .wrapper {
     max-width: 85%;
     margin: 0 auto;
   }
@@ -143,13 +144,13 @@ body {
     margin-bottom: 30px;
   }
 
-  .nav-list {
+  .nav__list {
     display: flex;
     flex-direction: row;
     gap: 20px;
   }
 
-  .list-item {
+  .nav__item {
     border: none;
   }
 
@@ -159,32 +160,29 @@ body {
     gap: 30px;
   }
 
-  .hero-info {
+  .hero__content-container {
     flex: 1 1 40%;
     align-items: flex-start;
   }
 
-  .hero-title {
+  .hero__title {
     font-size: 30px;
     text-align: left;
   }
 
-  .hero-description {
+  .hero__description {
     text-align: left;
     font-size: 16px;
   }
 
-  .hero-image-container {
-    /* border: 1px solid red; */
-    /* flex: 1 1 60%; */
-
+  .hero__image-container {
     max-width: 100%;
     max-height: 100%;
   }
 }
 
 @media (min-width: 1200px) {
-  .content-wrapper {
+  .wrapper {
     max-width: 70%;
   }
 
@@ -192,17 +190,17 @@ body {
     gap: 100px;
   }
 
-  .hero-title {
+  .hero__title {
     font-size: 40px;
   }
 
-  .hero-description {
+  .hero__description {
     font-size: 18px;
   }
 }
 
 @media (min-width: 1600px) {
-  .content-wrapper {
+  .wrapper {
     max-width: 50%;
   }
 }
