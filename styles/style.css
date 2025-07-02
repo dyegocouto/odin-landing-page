@@ -23,8 +23,9 @@ html {
 /* Regular css */
 
 :root {
-  --dark-blue: #1f2937;
   --bright-blue: #3882f6;
+  --medium-blue: #306ed3;
+  --dark-blue: #1f2937;
   --bright-white: #f9faf8;
   --medium-white: #e5e7eb;
 }
@@ -35,7 +36,7 @@ body {
   min-height: 100vh;
 }
 
-.wrapper {
+.wrapper--wide {
   padding: 10px;
 }
 
@@ -43,6 +44,7 @@ body {
 
 .header {
   background-color: var(--dark-blue);
+  margin-bottom: 20px;
 }
 
 .nav {
@@ -128,8 +130,48 @@ body {
   border-radius: 5px;
 }
 
+/* Gallery section */
+
+.gallery-section__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gallery {
+  /* display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0; */
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px 100px;
+}
+
+.gallery__figure {
+  margin: 0;
+  width: 120px;
+}
+
+.gallery__image {
+  border: 3px solid var(--medium-blue);
+  border-radius: 8px;
+}
+
+.gallery__caption {
+  color: #444;
+  font-size: 14px;
+  width: 120px;
+  text-align: center;
+}
+
+/* Media queries */
+
 @media (min-width: 550px) {
-  .wrapper {
+  .wrapper--wide {
     max-width: 85%;
     margin: 0 auto;
   }
@@ -182,7 +224,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .wrapper {
+  .wrapper--wide {
     max-width: 70%;
   }
 
@@ -200,7 +242,7 @@ body {
 }
 
 @media (min-width: 1600px) {
-  .wrapper {
+  .wrapper--wide {
     max-width: 50%;
   }
 }
