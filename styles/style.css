@@ -14,6 +14,13 @@ html {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
 *,
 *:before,
 *:after {
@@ -94,7 +101,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .hero__title {
@@ -102,12 +109,14 @@ body {
   color: var(--bright-white);
   font-size: 40px;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .hero__description {
   color: var(--medium-white);
   font-size: 18px;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .signup {
@@ -116,7 +125,8 @@ body {
   background-color: var(--bright-blue);
   color: var(--bright-white);
   font-size: 0.95rem;
-  padding: 8px 34px;
+  /* padding: 8px 34px; */
+  padding: 8px 30px;
   border-radius: 6px;
   max-width: 120px;
 }
@@ -132,19 +142,16 @@ body {
 
 /* Gallery section */
 
+.gallery-section {
+  margin-bottom: 20px;
+}
+
 .gallery-section__title {
   text-align: center;
   margin-bottom: 60px;
 }
 
 .gallery {
-  /* display: flex;
-  flex-direction: row;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-  margin: 40px 0; */
-
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -166,6 +173,64 @@ body {
   font-size: 14px;
   width: 120px;
   text-align: center;
+}
+
+/* Quote section */
+
+.quote-section {
+  background-color: var(--medium-white);
+  padding: 30px;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quote {
+  margin: 0;
+  flex: 1;
+  margin: 0 auto;
+}
+
+.quote__text {
+  margin: 0;
+  color: var(--dark-blue);
+  font-weight: light;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.quote__author {
+  font-weight: bold;
+  display: block;
+  text-align: right;
+}
+
+/* Signup section */
+
+.signup__banner {
+  background-color: var(--bright-blue);
+  color: var(--bright-white);
+  border-radius: 8px;
+  flex: 1;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.singup__title {
+  margin-bottom: 15px;
+}
+
+.signup__text {
+  margin-bottom: 15px;
+}
+
+.signup--white-border {
+  border: 2px solid var(--bright-white);
 }
 
 /* Media queries */
@@ -221,6 +286,16 @@ body {
     max-width: 100%;
     max-height: 100%;
   }
+
+  .quote__text {
+    font-size: 19px;
+  }
+
+  .signup__banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -238,6 +313,14 @@ body {
 
   .hero__description {
     font-size: 18px;
+  }
+
+  .gallery__caption {
+    font-size: 15px;
+  }
+
+  .quote__text {
+    font-size: 20px;
   }
 }
 
