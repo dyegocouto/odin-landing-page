@@ -64,6 +64,7 @@ body {
 .nav__logo {
   color: var(--bright-white);
   margin-bottom: 1.25rem;
+  font-size: 1.8rem;
 }
 
 .nav__list {
@@ -114,6 +115,7 @@ body {
 
 .hero__description {
   color: var(--medium-white);
+  line-height: 1.4;
   text-align: center;
   margin-bottom: 0.9375rem;
 }
@@ -153,7 +155,7 @@ body {
 
 .gallery__title {
   text-align: center;
-  margin-bottom: 3.75rem;
+  margin-bottom: 2.5rem;
 }
 
 .gallery__items {
@@ -177,6 +179,7 @@ body {
   color: #444;
   width: 7.5rem;
   text-align: center;
+  font-size: 0.8rem;
 }
 
 /* quote section */
@@ -205,6 +208,8 @@ body {
   font-style: italic;
   line-height: 1.4;
   margin-bottom: 0.375rem;
+
+  font-size: clamp(16px, 2vw, 20px);
 }
 
 .quote__author {
@@ -246,6 +251,7 @@ body {
 
 .footer__text {
   color: var(--medium-white);
+  font-size: 0.9rem;
 }
 
 /* Media queries */
@@ -300,10 +306,15 @@ body {
     max-height: 100%;
   }
 
+  .gallery__caption {
+    font-size: 0.8625rem;
+  }
+
   .cta__banner {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    gap: 1.25rem;
   }
 }
 
