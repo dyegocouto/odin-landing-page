@@ -1,8 +1,8 @@
-/* Imports */
+/* imports */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* CSS reset */
+/* reset */
 
 html,
 body {
@@ -27,7 +27,7 @@ p {
   box-sizing: inherit;
 }
 
-/* Regular css */
+/* basics */
 
 :root {
   --bright-blue: #3882f6;
@@ -41,14 +41,15 @@ body {
   font-family: Roboto, sans-serif;
   min-width: 100vw;
   min-height: 100vh;
-  /* overflow-x: hidden; */
+
+  overflow-x: hidden;
 }
 
-.wrapper--wide {
+.wrapper {
   padding: 10px;
 }
 
-/* Header */
+/* header */
 
 .header {
   background-color: var(--dark-blue);
@@ -98,7 +99,7 @@ body {
   flex-direction: column;
 }
 
-.hero__content-container {
+.hero__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,19 +121,22 @@ body {
   margin-bottom: 15px;
 }
 
-.signup {
+.signup-button {
   border: none;
   outline: none;
   background-color: var(--bright-blue);
   color: var(--bright-white);
   font-size: 0.95rem;
-  /* padding: 8px 34px; */
   padding: 8px 30px;
   border-radius: 6px;
   max-width: 120px;
+
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-.signup--white-border {
+.signup-button--white-border {
   border: 2px solid var(--bright-white);
 }
 
@@ -145,18 +149,18 @@ body {
   border-radius: 5px;
 }
 
-/* Gallery section */
+/* gallery section */
 
-.gallery-section {
+.gallery {
   margin-bottom: 20px;
 }
 
-.gallery-section__title {
+.gallery__title {
   text-align: center;
   margin-bottom: 60px;
 }
 
-.gallery {
+.gallery__items {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -180,9 +184,9 @@ body {
   text-align: center;
 }
 
-/* Quote section */
+/* quote section */
 
-.quote-section {
+.quote {
   background-color: var(--medium-white);
   padding: 30px;
   min-height: 20vh;
@@ -192,10 +196,11 @@ body {
   margin-bottom: 20px;
 }
 
-.quote {
-  margin: 0;
-  flex: 1;
-  margin: 0 auto;
+.quote__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .quote__text {
@@ -211,26 +216,25 @@ body {
   font-weight: bold;
   display: block;
   text-align: right;
+  align-self: flex-end;
 }
 
-/* Signup section */
+/* cta section */
 
-.signup__banner {
+.cta__banner {
   background-color: var(--bright-blue);
   color: var(--bright-white);
   border-radius: 8px;
-  flex: 1;
   padding: 30px;
-
   display: flex;
   flex-direction: column;
 }
 
-.signup__title {
+.cta__title {
   margin-bottom: 15px;
 }
 
-.signup__text {
+.cta__text {
   margin-bottom: 15px;
 }
 
@@ -253,7 +257,7 @@ body {
 /* Media queries */
 
 @media (min-width: 550px) {
-  .wrapper--wide {
+  .wrapper {
     max-width: 85%;
     margin: 0 auto;
   }
@@ -284,7 +288,7 @@ body {
     gap: 30px;
   }
 
-  .hero__content-container {
+  .hero__content {
     flex: 1 1 40%;
     align-items: flex-start;
   }
@@ -308,7 +312,7 @@ body {
     font-size: 19px;
   }
 
-  .signup__banner {
+  .cta__banner {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
@@ -316,7 +320,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .wrapper--wide {
+  .wrapper {
     max-width: 70%;
   }
 
@@ -342,7 +346,7 @@ body {
 }
 
 @media (min-width: 1600px) {
-  .wrapper--wide {
+  .wrapper {
     max-width: 50%;
   }
 }
